@@ -28,6 +28,7 @@
 - has_many: users, through::products_users
 
 
+
 ## imagesテーブル
 
 |Column|Type|Options|
@@ -38,6 +39,7 @@
 
 ### Association
 - has_many: belongs_to: product
+
 
 
 ## usersテーブル
@@ -61,6 +63,7 @@
 - belongs_to: profile
 
 
+
 ## profilesテーブル
 
 |Column|Type|Options|
@@ -72,6 +75,7 @@
 
 ### Association
 - has_one: user
+
 
 
 ## evaluationsテーブル
@@ -87,6 +91,7 @@
 - belongs_to: user
 
 
+
 ## noticesテーブル
 
 |Column|Type|Options|
@@ -98,6 +103,7 @@
 ### Association
 - has_many: notices_users
 - has_many: users, through::notices_users
+
 
 
 ## notices_usersテーブル
@@ -113,6 +119,7 @@
 - belongs_to: notice
 
 
+
 ## products_usersテーブル
 
 |Column|Type|Options|
@@ -124,6 +131,7 @@
 ### Association
 - belongs_to: user
 - belongs_to: product
+
 
 
 ## addressesテーブル
@@ -147,6 +155,7 @@
 - has_one: user
 
 
+
 ## cardnumbersテーブル
 
 |Column|Type|Options|
@@ -160,6 +169,7 @@
 
 ### Association
 - has_one: user
+
 
 
 ## accountsテーブル
