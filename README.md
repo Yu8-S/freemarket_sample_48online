@@ -10,9 +10,7 @@
 |brand|varchar(20)||
 |exhibitor|string|null: false|
 |state|varchar|null: false|
-|category_largeclass|varchar|null: false|
-|category_middleclass|varchar|null: false|
-|category_smallclass|varchar|null: false|
+|category|varchar|null: false|
 |delivery_fee|int|null: false|
 |shipping_method|varchar|null: false|
 |estimated_shipping|varchar|null: false|
@@ -26,6 +24,7 @@
 - has_many: images
 - has_many: products_users
 - has_many: users, through::products_users
+- has_ancestry
 
 
 
