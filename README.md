@@ -22,8 +22,7 @@
 
 ### Association
 - has_many: images
-- has_many: products_users
-- has_many: users, through::products_users
+- belongs_to: user
 - has_ancestry
 
 
@@ -51,8 +50,7 @@
 
 
 ### Association
-- has_many: products_users
-- has_many: products, through::products_users
+- has_many: products
 - has_many: evaluations
 - has_many: notices_users
 - has_many: notices, through::notices_users
@@ -116,20 +114,6 @@
 ### Association
 - belongs_to: user
 - belongs_to: notice
-
-
-
-## products_usersテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|product|references|foreign_key: true|
-|user|references|foreign_key: true|
-
-
-### Association
-- belongs_to: user
-- belongs_to: product
 
 
 
