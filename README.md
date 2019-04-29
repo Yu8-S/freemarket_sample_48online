@@ -37,7 +37,7 @@
 
 
 ### Association
-- has_many: belongs_to: product
+- belongs_to: product
 
 
 
