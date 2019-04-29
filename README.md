@@ -2,7 +2,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|productname|varchar|null: false, index: true|
+|name|varchar|null: false, index: true|
 |price|int|null: false, index: true|
 |image|references|foreign_key: true|
 |description|varchar|null: false, index: true|
