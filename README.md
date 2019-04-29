@@ -68,6 +68,10 @@
 |user|references|foreign_key: true|
 |introduction|varchar||
 |image_url|text||
+|first_name|varchar|null: false|
+|last_name|varchar|null: false|
+|first_name_kana|varchar|null: false|
+|last_name_kana|varchar|null: false|
 
 
 ### Association
@@ -121,10 +125,6 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|first_name|varchar|null: false|
-|last_name|varchar|null: false|
-|first_name_kana|varchar|null: false|
-|last_name_kana|varchar|null: false|
 |postalcode|int|null: false|
 |prefectures|varchar|null: false|
 |city|varchar|null: false|
