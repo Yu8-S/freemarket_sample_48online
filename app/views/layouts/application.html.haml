@@ -1,0 +1,136 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title FreemarketSample48online
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  %body
+    = yield
+
+    /app banner
+    %section.l-content-expanded
+      %div.app-banner
+        %h2 スマホでかんたんフリマアプリ
+        %p 今すぐ無料ダウンロード
+        %figure
+          %img{alt: "写真", src: "img/face.jpg"}
+        %div
+          %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+          %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+    /footer
+    %section.l-content-expanded
+      %footer
+        %nav.footer-nav
+          /メルカリについて
+          %div.footer-nav-cell
+            %h2.footer-nav-cell-header
+              メルカリについて
+            %ul
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  会社概要（運営会社）
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  採用情報
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  プレスリリース
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  公式ブログ
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  メルカリロゴ利用ガイドライン
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  %i.fas.fa-twitter
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  %i.fas.fa-facebook
+            /ヘルプ＆ガイド
+          %div.footer-nav-cell
+            %h2.footer-nav--cell-header
+              ヘルプ＆ガイド
+            %ul
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  メルカリガイド
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  らくらくメルカリ便
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  ゆうゆうメルカリ便
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  大型メルカリ便
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  車体取引ガイド
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  ゆうゆうメルカリ便
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  大型メルカリ便
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  車体取引ガイド
+          /プライバシーと利用規約
+          %div.footer-nav-cell
+            %h2.footer-nav--cell-header
+              プライバシーと利用規約
+            %ul
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  プライバシーポリシー
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  メルカリ利用規約
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  あんしんスマホサポート規約に関する利用規約
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  コンプライアンスポリシー
+          %div.footer-nav-cell
+            %ul
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  個人データの安全管理に係わる基本方針
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  特定商取引に関する表記
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  資金決済法に基づく表示
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  法令順守と犯罪抑止のために
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  返品・返金ポリシー
+          /国
+          %div.footer-nav-cell
+            %h2.footer-nav--cell-header
+              国
+            %ul
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  日本
+              %li
+                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+                  united States
+        %div.footer-bottom
+          %img{alt: "写真", src: "img/face.jpg"}
+          %span.gooter-bottom-copyright
+            %small
+              ©︎ 2019 Mercari
+    %a{ :href => 'http://google.co.jp', :class => 'sell-btn' }
+      %div.sell-btn-text 出品
+      %i.fas.fa-camera
+

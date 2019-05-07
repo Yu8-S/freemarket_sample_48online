@@ -1,0 +1,409 @@
+%div#container
+  /navigation
+  %section.l-content-fixed
+    %header.header
+      %a.header-icon
+      %form{:action => "/", :method => "post"}
+        %input.header-form{:name => "title", :size => "40"}
+          %i.fas.fa-search
+    %nav.nav
+      %ul.nav-menu
+        %li.nav-menu-item.nav-menu-item-category
+          %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            %i.fas.fa-bars
+              ::before
+            %span カテゴリーから探す
+        %li.nav-menu-item.nav-menu-item-brand
+          %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            %i.fas.fa-tag
+              ::before
+            %span ブランドから探す
+        %li.nav-menu-item.nav-menu-item-notice
+          %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            %i.fas.fa-bell
+              ::before
+            %span お知らせ
+        %li.nav-menu-item.nav-menu-item-todolist
+          %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            %i.fas.fa-check
+              ::before
+            %span やることリスト
+        %li.nav-menu-item.nav-menu-item-mypage
+          %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            %img{alt: "写真", src: "img/face.jpg"}
+              ::before
+            %span マイページ
+  /hero image
+  %section.l-content-expanded
+    %div.hero-image
+      %div.hero-image-prev
+        %span <
+      %div.hero-image-next
+        %span >
+      %div.hero-image-dot__active
+        %span •
+      %div.hero-image-dot
+        %span •
+      %div.hero-image-dot
+        %span •
+      %div.hero-image-dot
+        %span •
+  /main content
+  %section.l-content-fixed
+    %header.section-header
+      %h1.section-picup ピックアップカテゴリー
+      /レディース新着アイテム
+      /renderにて_ladies-picup.html.hamlへまとめる
+    %main.picup-item-ladies
+      %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+        レディース新着アイテム
+      %div.l-multicolumn
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+    %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+      全ての商品を見る
+      /メンズ新着アイテム
+      /renderにて_mens-picup.html.hamlへまとめる
+    %main.picup-item-mens
+      %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+        メンズ新着アイテム
+      %div.l-multicolumn
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+    %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+      全ての商品を見る
+      /ベビー・キッズ新着アイテム
+      /renderにて_baby&kids-picup.html.hamlへまとめる
+    %main.picup-item-kids
+      %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+        ベビー・キッズ新着アイテム
+      %div.l-multicolumn
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+    %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+      全ての商品を見る
+      /コスメ・香水・美容新着アイテム
+      /renderにて_beauty-picup.html.hamlへまとめる
+    %main.picup-item-beauty
+      %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+        コスメ・香水・美容新着アイテム
+      %div.l-multicolumn
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+    %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+      全ての商品を見る
+
+    %header.section-header
+      %h1.section-picup ピックアップブランド
+      /シャネル新着アイテム
+      /renderにて_ladies-picup.html.hamlへまとめる
+    %main.picup-item-chanel
+      %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+        シャネル新着アイテム
+      %div.l-multicolumn
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+    %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+      全ての商品を見る
+      /ルイヴィトン新着アイテム
+      /renderにて_vuitton-picup.html.hamlへまとめる
+    %main.picup-item-vuitton
+      %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+        ルイヴィトン新着アイテム
+      %div.l-multicolumn
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+    %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+      全ての商品を見る
+      /シェプリーム新着アイテム
+      /renderにて_baby&kids-picup.html.hamlへまとめる
+    %main.picup-item-supreme
+      %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+        シェプリーム新着アイテム
+      %div.l-multicolumn
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+    %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+      全ての商品を見る
+      /ナイキ新着アイテム
+      /renderにて_nike-picup.html.hamlへまとめる
+    %main.picup-item-nike
+      %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+        ナイキ新着アイテム
+      %div.l-multicolumn
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+        %section.l-column
+          %header
+            %img{alt: "写真", src: "img/face.jpg"}
+          %p sample
+          %div
+            %span ¥3,500
+            %i.fas.fa-check
+              ::before
+            %span 1
+    %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+      全ての商品を見る
