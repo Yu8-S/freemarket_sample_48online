@@ -2,20 +2,20 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|varchar|null: false, index: true|
+|name|string|null: false, index: true|
 |price|int|null: false, index: true|
 |image|references|foreign_key: true|
 |description|varchar|null: false, index: true|
-|size|varchar||
-|brand|varchar(20)||
+|size|string||
+|brand|string||
 |exhibitor|string|null: false|
-|state|varchar|null: false|
-|category|varchar|null: false|
+|state|string|null: false|
+|category|string|null: false|
 |delivery_fee|int|null: false|
-|shipping_method|varchar|null: false|
-|estimated_shipping|varchar|null: false|
+|shipping_method|string|null: false|
+|estimated_shipping|string|null: false|
 |user|references|foreign_key: true|
-|transaction_status|varchar|null: false|
+|transaction_status|string|null: false|
 |buyer|string||
 |nice|int||
 
@@ -68,10 +68,10 @@
 |user|references|foreign_key: true|
 |introduction|varchar||
 |image_url|text||
-|first_name|varchar|null: false|
-|last_name|varchar|null: false|
-|first_name_kana|varchar|null: false|
-|last_name_kana|varchar|null: false|
+|first_name|string|null: false|
+|last_name|string|null: false|
+|first_name_kana|string|null: false|
+|last_name_kana|string|null: false|
 
 
 ### Association
@@ -83,8 +83,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|evaluation|varchar|null: false|
-|comment|varchar(30)||
+|evaluation|string|null: false|
+|comment|string||
 |user|references|foreign_key: true|
 
 
@@ -97,7 +97,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|title|varchar(128)||
+|title|string||
 |contents|text||
 
 
@@ -126,10 +126,10 @@
 |Column|Type|Options|
 |------|----|-------|
 |postalcode|int|null: false|
-|prefectures|varchar|null: false|
-|city|varchar|null: false|
-|address|varchar|null: false|
-|buildingname|varchar||
+|prefectures|string|null: false|
+|city|string|null: false|
+|address|string|null: false|
+|buildingname|string||
 |tell|int|null: false|
 |user|references|foreign_key: true|
 
@@ -161,13 +161,13 @@
 |Column|Type|Options|
 |------|----|-------|
 |bank|varchar|null: false|
-|account_type|varchar|null: false|
+|account_type|string|null: false|
 |cranch_code|int|null: false|
 |account_number|int|null: false|
-|account_holder_firstname|varchar|null: false|
-|account_holder_lastname|varchar|null: false|
-|address|varchar|null: false|
-|name|varchar|null: false|
+|account_holder_firstname|string|null: false|
+|account_holder_lastname|string|null: false|
+|address|string|null: false|
+|name|string|null: false|
 |user|references|foreign_key: true|
 
 

@@ -1,0 +1,51 @@
+.app-banner {
+  background-color: #f5f5f5;
+  padding-top: 86px;
+  &-main {
+    background-image: image-url("footer-content.jpg");
+    background-size: cover;
+    width: 1440px;
+    height: 260px;
+    position: relative;
+    &::before {
+      background: inherit;
+      content: '';
+      filter: blur(3px);
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      left: -1px;
+    }
+    &-store {
+      margin-left: 345px;
+      position: absolute;
+      top: 50px;
+      width: 750px;
+      height: 260px;
+      h2 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 35px;
+      }
+      &-tag {
+        margin-top: 26px;
+        display: inline-flex;
+        align-items: center;
+        ul {
+          display: inline-flex;
+          margin-left: 24px;
+          li {
+            margin-left: 16px;
+          }
+        }
+      }
+    }
+    figure {
+      position: absolute;
+      right: 345px;
+      margin: 0;
+    }
+  }
+}
