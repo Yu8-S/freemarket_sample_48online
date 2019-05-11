@@ -1,4 +1,4 @@
-%div#container
+#container
   /navigation
   %section.l-content-fixed.header-color
     %header.header
@@ -33,7 +33,7 @@
   /hero image
   %section.l-content-expanded
     %div
-      %div.hero-image-slider
+      .hero-image-slider
         = image_tag 'main-content2.png', :size => '1440x390'
         / = image_tag 'main-content4.png', :size => '1440x390'
       / %div.hero-image-prev
@@ -58,13 +58,13 @@
     %section.picup-item.picup-item__firts
       %a{ :href => 'http://google.co.jp', :class => 'picup-item-header' }
         レディース新着アイテム
-      %div.l-multicolumn
+      .l-multicolumn
         %section.l-column
           %header
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -73,7 +73,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -82,7 +82,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -91,7 +91,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -102,13 +102,13 @@
     %section.picup-item
       %a{ :href => 'http://google.co.jp', :class => 'picup-item-header' }
         メンズ新着アイテム
-      %div.l-multicolumn
+      .l-multicolumn
         %section.l-column
           %header
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -117,7 +117,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -126,7 +126,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -135,7 +135,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -146,13 +146,13 @@
     %section.picup-item
       %a{ :href => 'http://google.co.jp', :class => 'picup-item-header' }
         ベビー・キッズ新着アイテム
-      %div.l-multicolumn
+      .l-multicolumn
         %section.l-column
           %header
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -161,7 +161,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -170,7 +170,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -179,7 +179,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -190,13 +190,22 @@
     %section.picup-item
       %a{ :href => 'http://google.co.jp', :class => 'picup-item-header' }
         コスメ・香水・美容新着アイテム
-      %div.l-multicolumn
+      .l-multicolumn
         %section.l-column
           %header
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
+        %section.l-column
+          %header
+            = image_tag 'default.jpg', :size => '213x220'
+          %div
+            %p サンプル。adidas! 早い者勝ち
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -214,16 +223,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
-              %span ¥3,500
-              %i.far.fa-heart
-              %span.like 1
-        %section.l-column
-          %header
-            = image_tag 'default.jpg', :size => '213x220'
-          %div
-            %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -234,13 +234,13 @@
     %section.picup-item
       %a{ :href => 'http://google.co.jp', :class => 'picup-item-header' }
         シャネル新着アイテム
-      %div.l-multicolumn
+      .l-multicolumn
         %section.l-column
           %header
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -249,7 +249,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -258,7 +258,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -267,7 +267,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -278,13 +278,13 @@
     %section.picup-item
       %a{ :href => 'http://google.co.jp', :class => 'picup-item-header' }
         ルイヴィトン新着アイテム
-      %div.l-multicolumn
+      .l-multicolumn
         %section.l-column
           %header
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -293,7 +293,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -302,7 +302,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -311,7 +311,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -322,13 +322,13 @@
     %section.picup-item
       %a{ :href => 'http://google.co.jp', :class => 'picup-item-header' }
         シェプリーム新着アイテム
-      %div.l-multicolumn
+      .l-multicolumn
         %section.l-column
           %header
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -337,7 +337,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -346,7 +346,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -355,7 +355,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -366,13 +366,13 @@
     %section.picup-item
       %a{ :href => 'http://google.co.jp', :class => 'picup-item-header' }
         ナイキ新着アイテム
-      %div.l-multicolumn
+      .l-multicolumn
         %section.l-column
           %header
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -381,7 +381,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -390,7 +390,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
@@ -399,7 +399,7 @@
             = image_tag 'default.jpg', :size => '213x220'
           %div
             %p サンプル。adidas! 早い者勝ち
-            %div.details
+            .details
               %span ¥3,500
               %i.far.fa-heart
               %span.like 1
