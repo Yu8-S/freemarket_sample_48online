@@ -7,23 +7,29 @@
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    %link{:crossorigin => "anonymous", :href => "https://use.fontawesome.com/releases/v5.8.1/css/all.css", :integrity => "sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf", :rel => "stylesheet"}/
   %body
     = yield
 
     /app banner
     %section.l-content-expanded
       %div.app-banner
-        %h2 スマホでかんたんフリマアプリ
-        %p 今すぐ無料ダウンロード
-        %figure
-          %img{alt: "写真", src: "img/face.jpg"}
-        %div
-          %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
-          %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+        %div.app-banner-main
+          %div.app-banner-main-store
+            %h2 スマホでかんたんフリマアプリ
+            %p 今すぐ無料ダウンロード
+            %div.app-banner-main-store-tag
+              = image_tag 'mercari_icon.png', :size => '68x68'
+              %ul
+                %li
+                  = image_tag 'app-store.png', :size => '133x40'
+                %li
+                  = image_tag 'google-play.jpg', :size => '133x40'
+          %figure
+            = image_tag 'footer-content.png', :size => '300x260'
     /footer
     %section.l-content-expanded
-      %footer
+      %footer.footer
         %nav.footer-nav
           /メルカリについて
           %div.footer-nav-cell
@@ -45,15 +51,16 @@
               %li
                 %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
                   メルカリロゴ利用ガイドライン
-              %li
-                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
-                  %i.fas.fa-twitter
-              %li
-                %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
-                  %i.fas.fa-facebook
+              %li.log
+                %div.log-twitter
+                  %a{ :href => 'http://google.co.jp', :class => 'twitter' }
+                    %i.fab.fa-twitter.fa-2x
+                %div.log-facebook
+                  %a{ :href => 'http://google.co.jp', :id => 'facebook' }
+                    %i.fab.fa-facebook.fa-2x
             /ヘルプ＆ガイド
           %div.footer-nav-cell
-            %h2.footer-nav--cell-header
+            %h2.footer-nav-cell-header
               ヘルプ＆ガイド
             %ul
               %li
@@ -116,7 +123,7 @@
                   返品・返金ポリシー
           /国
           %div.footer-nav-cell
-            %h2.footer-nav--cell-header
+            %h2.footer-nav-cell-header
               国
             %ul
               %li
@@ -126,11 +133,12 @@
                 %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
                   united States
         %div.footer-bottom
-          %img{alt: "写真", src: "img/face.jpg"}
-          %span.gooter-bottom-copyright
-            %small
-              ©︎ 2019 Mercari
-    %a{ :href => 'http://google.co.jp', :class => 'sell-btn' }
-      %div.sell-btn-text 出品
-      %i.fas.fa-camera
+          = image_tag 'mercari-icon_footer.png', :size => '124x31'
+        %div.footer-copyright
+          %small
+            ©︎ 2019 Mercari
+    %div.sell-btn
+      %a{ :href => 'http://google.co.jp', :class => 'sell-btn' }
+        %div.sell-btn-text 出品
+        %i.fas.fa-camera.fa-3x
 
