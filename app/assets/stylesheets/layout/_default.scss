@@ -20,6 +20,7 @@
   display: flex;
   height: 330px;
   margin-top: 26px;
+  color: #000;
 }
 
 .l-column:nth-child(1) {
@@ -36,6 +37,7 @@
     font-weight: 400;
     line-height: 1.5;
     text-align: left;
+    color: #000;
     .details {
       display: flex;
       width: 100%;
