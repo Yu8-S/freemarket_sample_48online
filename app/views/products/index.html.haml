@@ -1,409 +1,407 @@
 %div#container
   /navigation
-  %section.l-content-fixed
+  %section.l-content-fixed.header-color
     %header.header
-      %a.header-icon
-      %form{:action => "/", :method => "post"}
-        %input.header-form{:name => "title", :size => "40"}
-          %i.fas.fa-search
+      %a.header-icon.header-item
+        = image_tag 'log.jpg', :size => '134x36'
+      %form{:action => "/", :method => "post", :class => "header-form"}
+        %input{:name => "title", :class => "header-form-input", :placeholder => "何かお探しですか？"}
+          %i.fas.fa-search.fa-lg
     %nav.nav
       %ul.nav-menu
-        %li.nav-menu-item.nav-menu-item-category
+        %li.nav-menu-item.nav-menu-category
           %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
-            %i.fas.fa-bars
-              ::before
+            %i.fas.fa-bars.color-emphasis.fa-lg
             %span カテゴリーから探す
-        %li.nav-menu-item.nav-menu-item-brand
+        %li.nav-menu-item.nav-menu-brand
           %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
-            %i.fas.fa-tag
-              ::before
+            %i.fas.fa-tag.color-emphasis.fa-lg
             %span ブランドから探す
-        %li.nav-menu-item.nav-menu-item-notice
+        %li.nav-menu-item.nav-menu-notice
           %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
-            %i.fas.fa-bell
-              ::before
+            %i.fas.fa-bell.color.fa-lg
             %span お知らせ
-        %li.nav-menu-item.nav-menu-item-todolist
+        %li.nav-menu-item.nav-menu-todolist
           %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
-            %i.fas.fa-check
-              ::before
+            %i.fas.fa-check.color.fa-lg
             %span やることリスト
-        %li.nav-menu-item.nav-menu-item-mypage
+        %li.nav-menu-item.nav-menu-mypage
           %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
-            %img{alt: "写真", src: "img/face.jpg"}
-              ::before
-            %span マイページ
+            %div.nav-menu-mypage-img
+              = image_tag 'log.jpg', :size => '32x32'
+              %span マイページ
   /hero image
   %section.l-content-expanded
-    %div.hero-image
-      %div.hero-image-prev
-        %span <
-      %div.hero-image-next
-        %span >
-      %div.hero-image-dot__active
-        %span •
-      %div.hero-image-dot
-        %span •
-      %div.hero-image-dot
-        %span •
-      %div.hero-image-dot
-        %span •
+    %div
+      %div.hero-image-slider
+        = image_tag 'main-content2.png', :size => '1440x390'
+        / = image_tag 'main-content4.png', :size => '1440x390'
+      / %div.hero-image-prev
+      /   %span <
+      / %div.hero-image-next
+      /   %span >
+      / %div.hero-image-dotbox
+      /   %div.hero-image-dotbox-dot__active
+      /     %span •
+      /   %div.hero-image-dotbox-dot
+      /     %span •
+      /   %div.hero-image-dotbox-dot
+      /     %span •
+      /   %div.hero-image-dotbox-dot
+      /     %span •
   /main content
   %section.l-content-fixed
     %header.section-header
-      %h1.section-picup ピックアップカテゴリー
+      %h1.section-header-picup ピックアップカテゴリー
       /レディース新着アイテム
       /renderにて_ladies-picup.html.hamlへまとめる
-    %main.picup-item-ladies
-      %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+    %section.picup-item.picup-item__firts
+      %a{ :href => 'http://google.co.jp', :class => 'picup-item-header' }
         レディース新着アイテム
       %div.l-multicolumn
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
-    %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
-      全ての商品を見る
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
+      %a{ :href => 'http://google.co.jp', :class => 'all-product' }
+        すべての商品を見る
       /メンズ新着アイテム
       /renderにて_mens-picup.html.hamlへまとめる
-    %main.picup-item-mens
-      %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+    %section.picup-item
+      %a{ :href => 'http://google.co.jp', :class => 'picup-item-header' }
         メンズ新着アイテム
       %div.l-multicolumn
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
-    %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
-      全ての商品を見る
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
+      %a{ :href => 'http://google.co.jp', :class => 'all-product' }
+        すべての商品を見る
       /ベビー・キッズ新着アイテム
       /renderにて_baby&kids-picup.html.hamlへまとめる
-    %main.picup-item-kids
-      %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+    %section.picup-item
+      %a{ :href => 'http://google.co.jp', :class => 'picup-item-header' }
         ベビー・キッズ新着アイテム
       %div.l-multicolumn
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
-    %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
-      全ての商品を見る
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
+      %a{ :href => 'http://google.co.jp', :class => 'all-product' }
+        すべての商品を見る
       /コスメ・香水・美容新着アイテム
       /renderにて_beauty-picup.html.hamlへまとめる
-    %main.picup-item-beauty
-      %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+    %section.picup-item
+      %a{ :href => 'http://google.co.jp', :class => 'picup-item-header' }
         コスメ・香水・美容新着アイテム
       %div.l-multicolumn
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
-    %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
-      全ての商品を見る
-
-    %header.section-header
-      %h1.section-picup ピックアップブランド
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
+      %a{ :href => 'http://google.co.jp', :class => 'all-product' }
+        すべての商品を見る
       /シャネル新着アイテム
       /renderにて_ladies-picup.html.hamlへまとめる
-    %main.picup-item-chanel
-      %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+    %section.picup-item
+      %a{ :href => 'http://google.co.jp', :class => 'picup-item-header' }
         シャネル新着アイテム
       %div.l-multicolumn
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
-    %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
-      全ての商品を見る
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
+      %a{ :href => 'http://google.co.jp', :class => 'all-product' }
+        すべての商品を見る
       /ルイヴィトン新着アイテム
       /renderにて_vuitton-picup.html.hamlへまとめる
-    %main.picup-item-vuitton
-      %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+    %section.picup-item
+      %a{ :href => 'http://google.co.jp', :class => 'picup-item-header' }
         ルイヴィトン新着アイテム
       %div.l-multicolumn
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
-    %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
-      全ての商品を見る
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
+      %a{ :href => 'http://google.co.jp', :class => 'all-product' }
+        すべての商品を見る
       /シェプリーム新着アイテム
       /renderにて_baby&kids-picup.html.hamlへまとめる
-    %main.picup-item-supreme
-      %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+    %section.picup-item
+      %a{ :href => 'http://google.co.jp', :class => 'picup-item-header' }
         シェプリーム新着アイテム
       %div.l-multicolumn
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
-    %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
-      全ての商品を見る
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
+      %a{ :href => 'http://google.co.jp', :class => 'all-product' }
+        すべての商品を見る
       /ナイキ新着アイテム
       /renderにて_nike-picup.html.hamlへまとめる
-    %main.picup-item-nike
-      %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+    %section.picup-item
+      %a{ :href => 'http://google.co.jp', :class => 'picup-item-header' }
         ナイキ新着アイテム
       %div.l-multicolumn
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
         %section.l-column
           %header
-            %img{alt: "写真", src: "img/face.jpg"}
-          %p sample
+            = image_tag 'default.jpg', :size => '213x220'
           %div
-            %span ¥3,500
-            %i.fas.fa-check
-              ::before
-            %span 1
-    %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
-      全ての商品を見る
+            %p サンプル。adidas! 早い者勝ち
+            %div.details
+              %span ¥3,500
+              %i.far.fa-heart
+              %span.like 1
+      %a{ :href => 'http://google.co.jp', :class => 'all-product' }
+        すべての商品を見る
