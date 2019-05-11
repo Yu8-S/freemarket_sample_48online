@@ -1,12 +1,10 @@
 #container
-  /navigation
   %section.l-content-fixed.header-color
     %header.header
-      =link_to products_path,class:"header-icon.header-item" do
-        = image_tag 'log.jpg', :size => '134x36'
-      / %a.header-icon.header-item
-      %form{:action => "/", :method => "post", :class => "header-form"}
-        %input{:name => "title", :class => "header-form-input", :placeholder => "何かお探しですか？"}
+      =link_to products_path,class: "header-icon.header-item" do
+        = image_tag 'log.jpg', size: '134x36'
+      %form{action: "/", method: "post", class: "header-form"}
+        %input{name: "title", :class => "header-form-input", placeholder: "何かお探しですか？"}
           %i.fas.fa-search.fa-lg
     %nav.nav
       %ul.nav-menu
@@ -29,33 +27,15 @@
         %li.nav-menu-item.nav-menu-mypage
           =link_to products_path do
             %div.nav-menu-mypage-img
-              = image_tag 'log.jpg', :size => '32x32'
+              = image_tag 'log.jpg', size: '32x32'
               %span マイページ
-  /hero image
   %section.l-content-expanded
     %div
       .hero-image-slider
-        = image_tag 'main-content2.png', :size => '1440x390'
-        / = image_tag 'main-content4.png', :size => '1440x390'
-      / %div.hero-image-prev
-      /   %span <
-      / %div.hero-image-next
-      /   %span >
-      / %div.hero-image-dotbox
-      /   %div.hero-image-dotbox-dot__active
-      /     %span •
-      /   %div.hero-image-dotbox-dot
-      /     %span •
-      /   %div.hero-image-dotbox-dot
-      /     %span •
-      /   %div.hero-image-dotbox-dot
-      /     %span •
-  /main content
+        = image_tag 'main-content2.png', size: '1440x390'
   %section.l-content-fixed
     %header.section-header
       %h1.section-header-picup ピックアップカテゴリー
-      /レディース新着アイテム
-      /renderにて_ladies-picup.html.hamlへまとめる
     %section.picup-item.picup-item__firts
       =link_to products_path,class:"picup-item-header" do
         レディース新着アイテム
@@ -63,7 +43,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -73,7 +53,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -83,7 +63,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -93,7 +73,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -102,8 +82,6 @@
                 %span.like 1
       =link_to products_path,class:"all-product" do
         すべての商品を見る
-      /メンズ新着アイテム
-      /renderにて_mens-picup.html.hamlへまとめる
     %section.picup-item.picup-item
       =link_to products_path,class:"picup-item-header" do
         メンズ新着アイテム
@@ -111,7 +89,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -121,7 +99,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -131,7 +109,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -141,7 +119,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -150,8 +128,6 @@
                 %span.like 1
       =link_to products_path,class:"all-product" do
         すべての商品を見る
-      /ベビー・キッズ新着アイテム
-      /renderにて_baby&kids-picup.html.hamlへまとめる
     %section.picup-item.picup-item
       =link_to products_path,class:"picup-item-header" do
         ベビー・キッズ新着アイテム
@@ -159,7 +135,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -169,7 +145,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -179,7 +155,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -189,7 +165,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -198,8 +174,6 @@
                 %span.like 1
       =link_to products_path,class:"all-product" do
         すべての商品を見る
-      /コスメ・香水・美容新着アイテム
-      /renderにて_beauty-picup.html.hamlへまとめる
     %section.picup-item.picup-item
       =link_to products_path,class:"picup-item-header" do
         コスメ・香水・美容新着アイテム
@@ -207,7 +181,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -217,7 +191,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -227,7 +201,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -237,7 +211,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -246,8 +220,6 @@
                 %span.like 1
       =link_to products_path,class:"all-product" do
         すべての商品を見る
-      /シャネル新着アイテム
-      /renderにて_ladies-picup.html.hamlへまとめる
     %section.picup-item.picup-item
       =link_to products_path,class:"picup-item-header" do
         シャネル新着アイテム
@@ -255,7 +227,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -265,7 +237,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -275,7 +247,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -285,7 +257,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -294,8 +266,6 @@
                 %span.like 1
       =link_to products_path,class:"all-product" do
         すべての商品を見る
-      /ルイヴィトン新着アイテム
-      /renderにて_vuitton-picup.html.hamlへまとめる
     %section.picup-item.picup-item
       =link_to products_path,class:"picup-item-header" do
         ルイヴィトン新着アイテム
@@ -303,7 +273,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -313,7 +283,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -323,7 +293,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -333,7 +303,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -342,8 +312,6 @@
                 %span.like 1
       =link_to products_path,class:"all-product" do
         すべての商品を見る
-      /シェプリーム新着アイテム
-      /renderにて_baby&kids-picup.html.hamlへまとめる
     %section.picup-item.picup-item
       =link_to products_path,class:"picup-item-header" do
         シェプリーム新着アイテム
@@ -351,7 +319,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -361,7 +329,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -371,7 +339,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -381,7 +349,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -390,8 +358,6 @@
                 %span.like 1
       =link_to products_path,class:"all-product" do
         すべての商品を見る
-      /ナイキ新着アイテム
-      /renderにて_nike-picup.html.hamlへまとめる
     %section.picup-item.picup-item
       =link_to products_path,class:"picup-item-header" do
         ナイキ新着アイテム
@@ -399,7 +365,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -409,7 +375,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -419,7 +385,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
@@ -429,7 +395,7 @@
         %section.l-column
           =link_to products_path do
             %header
-              = image_tag 'default.jpg', :size => '213x220'
+              = image_tag 'default.jpg', size: '213x220'
             %div
               %p サンプル。adidas! 早い者勝ち
               .details
