@@ -1,114 +1,111 @@
 %section.l-content-expanded
   %footer.footer
     %nav.footer-nav
-      /メルカリについて
       %div.footer-nav-cell
         %h2.footer-nav-cell-header
           メルカリについて
         %ul
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               会社概要（運営会社）
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               採用情報
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               プレスリリース
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               公式ブログ
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               メルカリロゴ利用ガイドライン
           %li.log
-            %div.log-twitter
-              %a{ :href => 'http://google.co.jp', :class => 'twitter' }
+            .log-twitter
+              =link_to products_path,class:"twitter" do
                 %i.fab.fa-twitter.fa-2x
-            %div.log-facebook
-              %a{ :href => 'http://google.co.jp', :id => 'facebook' }
+            .log-facebook
+              =link_to products_path,class:"facebook" do
                 %i.fab.fa-facebook.fa-2x
-        /ヘルプ＆ガイド
-      %div.footer-nav-cell
+      .footer-nav-cell
         %h2.footer-nav-cell-header
           ヘルプ＆ガイド
         %ul
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               メルカリガイド
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               らくらくメルカリ便
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               ゆうゆうメルカリ便
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               大型メルカリ便
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               車体取引ガイド
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               ゆうゆうメルカリ便
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               大型メルカリ便
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               車体取引ガイド
       /プライバシーと利用規約
-      %div.footer-nav-cell
+      .footer-nav-cell
         %h2.footer-nav--cell-header
           プライバシーと利用規約
         %ul
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               プライバシーポリシー
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               メルカリ利用規約
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               あんしんスマホサポート規約に関する利用規約
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               コンプライアンスポリシー
-      %div.footer-nav-cell
+      .footer-nav-cell
         %ul
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               個人データの安全管理に係わる基本方針
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               特定商取引に関する表記
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               資金決済法に基づく表示
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               法令順守と犯罪抑止のために
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               返品・返金ポリシー
-      /国
-      %div.footer-nav-cell
+      .footer-nav-cell
         %h2.footer-nav-cell-header
           国
         %ul
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               日本
           %li
-            %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
+            =link_to products_path do
               united States
-    %div.footer-bottom
+    .footer-bottom
       = image_tag 'mercari-icon_footer.png', :size => '124x31'
-    %div.footer-copyright
+    .footer-copyright
       %small
         ©︎ 2019 Mercari
-%div.sell-btn
-  %a{ :href => 'http://google.co.jp', :class => 'sell-btn' }
-    %div.sell-btn-text 出品
+.sell-btn
+  =link_to products_path,class:"sell-btn" do
+    .sell-btn-text 出品
     %i.fas.fa-camera.fa-3x
 
