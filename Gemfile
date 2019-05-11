@@ -74,3 +74,5 @@ gem 'ancestry'
 
 gem 'haml-rails'
 gem "font-awesome-rails"
+gem 'bxslider-rails'
+gem 'jquery-rails'
