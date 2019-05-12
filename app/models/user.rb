@@ -14,4 +14,8 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
     end
   end
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/ログイン機能実装
 end
