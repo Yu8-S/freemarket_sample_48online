@@ -1,13 +1,17 @@
 @import "./base/normalize";
 @import "./base/default";
 @import "./layout/default";
-@import "./module/header";
-@import "./module/nav";
-@import "./module/hero-image";
-@import "./module/section-header";
-@import "./module/app-banner";
-@import "./module/footer";
-@import "./module/sell-btn";
+@import "./module/product/header";
+@import "./module/product/nav";
+@import "./module/product/hero-image";
+@import "./module/product/section-header";
+@import "./module/product/app-banner";
+@import "./module/product/footer";
+@import "./module/product/sell-btn";
+
+@import "./module/signup/signup-top";
+@import "./module/registrations/signup";
+@import "./module/login/login";
 
 @import "font-awesome";
 
