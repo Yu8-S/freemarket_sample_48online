@@ -1,0 +1,31 @@
+#container
+  %section.l-content-expanded
+    %article.signup-top
+      %header.signup-top-header
+        %div.signup-top-header-icon
+          = link_to products_path, class: "signup-top-header-icon" do
+            = image_tag 'mercari_logo_horizontal.png', size: '185x49'
+      %main.signup-top-main
+        %h2 新規会員登録
+        %ul.signup-top-main-list
+          = link_to new_user_registration_path do
+            %li.signup-top-main-list-email.signup-top-main-list-content
+              %i.far.fa-envelope.fa-lg
+              %span
+                メールアドレスで登録
+          = link_to "/users/auth/facebook" do
+            %li.signup-top-main-list-facebook.signup-top-main-list-content
+              %i.fab.fa-facebook-square.fa-lg
+              %span
+                Facebookで登録
+          = link_to "/users/auth/google_oauth2" do
+            %li.signup-top-main-list-google.signup-top-main-list-content
+              %i.fab.fa-google.fa-lg
+              %span
+                Googleで登録
+    = render partial: 'layouts/signup-footer'
+
+
+
+
+

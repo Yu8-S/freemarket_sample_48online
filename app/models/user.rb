@@ -14,4 +14,13 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
     end
   end
+
+  has_many :products
+  has_many :evaluations
+  has_many :notices_users
+  has_many :notices, through: :notices_users
+  belongs_to :locals
+  belongs_to :cardnumber
+  belongs_to :account
+  belongs_to :profile
 end
