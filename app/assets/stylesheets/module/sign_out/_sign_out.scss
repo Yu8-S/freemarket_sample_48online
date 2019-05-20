@@ -1,0 +1,17 @@
+.profile-main-signout {
+  height: 178.5px;
+  width: 700px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-button {
+    text-align: center;
+    width: 320px;
+    height: 49.46px;
+    line-height: 49.46px;
+    background-color: #ea352d;;
+    color: #fff;
+    font-size: 14px;
+  }
+}
