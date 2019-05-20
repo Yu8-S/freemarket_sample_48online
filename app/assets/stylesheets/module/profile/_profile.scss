@@ -1,222 +1,69 @@
-.profile-crumbs-list {
-  height: 48.24px;
-  background-color: #fff;
-  width: 100%;
-  display: inline-flex;
-  border-top: 1px solid #eee;
-  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
-  &-box {
-    margin: 0 auto;
-    width: 1020px;
-    padding: 16px;
-    ul {
-      display: inline-flex;
-      li {
-        font-size: 14px;
-        line-height: 1.2;
-        i {
-          margin: 0 8px;
-          color: #888;
-        }
-      }
-      li:nth-child(2) {
-        font-weight: 600;
-      }
-    }
-  }
-}
-.profile-main {
-  margin: 40px auto 0;
-  width: 1020px;
-  background-color: #f5f5f5;
-  display: flex;
-  &-nav {
-    width: 280px;
-    font-size: 1rem;
-    line-height: 48.98px;
-    margin-right: auto;
-    h3 {
-      font-size: 16px;
-      margin: 30px 0 -10px;
-    }
-    &-list {
-      ul {
-        .profile-main-nav-list-current {
-          background-color: #eee;
-          font-weight: 600;
-          i {
-            color: #000;
-          }
-        }
-        li {
-          width: 280px;
-          height: 48.98px;
-          background-color: #fff;
-          margin-right: 10px;
-          position: relative;
-          border-top: 1px solid #f5f5f5;
-          p {
-            padding: 0 10px;
-          }
-          i {
-            position: absolute;
-            color: #eee;
-            top: 17px;
-            right: 10px;
-          }
-        }
-      }
-    }
-  }
-  &-details {
-    width: 700px;
-    &-user {
-      height: 160px;
-      padding: 20px;
-      background: url(profile.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      text-align: center;
-      &-content {
-        img {
-          border-radius: 50%;
-        }
-        figure {
-          margin: 20px auto 0;
-          left: 40%;
-        }
-        h2 {
-          margin-top: 8px;
-          font-size: 14px;
-          font-weight: 600;
-        }
-        &-details {
-          display: inline-flex;
-          &-evaluation {
-            margin-top: 8px;
-            font-size: 14px;
-            span {
-              font-size: 16px;
-              margin-left: 8px;
-              font-weight: 600;
-            }
-          }
-          &-evaluation:nth-child(2) {
-            margin-left: 16px;
-          }
-        }
-      }
-    }
-    &-content {
-      background-color: #fff;
-      min-height: 235px;
-      &-nav {
-        display: flex;
-        height: 75.75px;
-        text-align: center;
-        line-height: 73.75px;
-        font-size: 1rem;
-        border-bottom: 1px solid #f5f5f5;
-        background-color: #eee;
-        &-left {
-          width: 50%;
-          h3 {
-            margin: 0;
-          }
-        }
-        &-right {
-          width: 50%;
-          h3 {
-            margin: 0;
-          }
-        }
-      }
-      &-left {
-        li {
-          height: 48px;
-          position: relative;
-          border: 1px solid #f5f5f5;
-          padding: 16px;
-          i {
-            position: absolute;
-            right: 10px;
-            top: 30px;
-          }
-          .profile-main-details-content-nav-left-title {
-            position: absolute;
-            width: 100%;
-            top: 20px;
-            left: 68px;
-            font-weight: 400;
-            line-height: 1;
-            i {
-              position: absolute;
-              top: 20px;
-              left: 0;
-              color: #808080;
-            }
-            span {
-              position: absolute;
-              top: 17px;
-              left: 20px;
-              color: #808080;
-            }
-          }
-          .profile-main-details-content-nav-left-button {
-            background-color: #eee;
-            text-align: center;
-            line-height: 48px;
-            height: 48px;
-            font-size: 1rem;
-          }
-        }
-      }
-      &-right {
-        text-align: center;
-      }
-    }
-    &-bottom-content {
-      font-size: 16px;
-      line-height: 72px;
-      padding: 0 16px;
-      margin: 40px 0 0 0;
-      background-color: #fff;
-    }
-    &-bottom-left {
-      background-color: #fff;
-    }
-    &-bottom-right {
-      background-color: #fff;
-    }
-  }
-  .not-found {
-    padding: 160px 0 60px;
-    background: url(mercari_icon.png);
-    background-repeat: no-repeat;
-    background-position: center 40px;
-    background-size: 78px 85px;
+.profile-main-right {
+  width: 700px;
+  &-title {
     text-align: center;
-    font-size: 16px;
-    color: #ccc;
-  }
-  .is-active__top {
+    font-size: 24px;
+    margin: 0;
+    padding: 8px 24px;
+    border-bottom: 1px solid #f5f5f5;
+    line-height: 1.4;
     background-color: #fff;
-    border-top: 2px solid #f00;
   }
-  .content__top {
-    display: none;
+  &-content {
+    height: 156px;
+    padding: 20px;
+    background: url(profile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    img {
+      border-radius: 50%;
+    }
+    figure {
+      margin-right: 0;
+    }
+    &-image {
+      padding: 72px 16px 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &-textfield {
+        width: 220px;
+        margin: 0 0 0 8px;
+        vertical-align: middle;
+        height: 28px;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1.5;
+        font-size: 16px;
+        outline: 0;
+      }
+    }
   }
-  .is-show__top {
-    display: block;
-  }
-  .is-active__bottom {
+  &-text {
     background-color: #fff;
-    border-top: 2px solid #f00;
-  }
-  .content__bottom {
-    display: none;
-  }
-  .is-show__bottom {
-    display: block;
+    padding: 40px 16px;
+    textarea {
+      min-height: 216px;
+      width: 648px;
+      max-width: 648px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background: #fff;
+      font-size: 16px;
+      line-height: 1.5;
+      outline: 0;
+    }
+    &-button {
+      margin-top: 16px;
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+      text-align: center;
+      line-height: 48px;
+      font-size: 14px;
+    }
   }
 }

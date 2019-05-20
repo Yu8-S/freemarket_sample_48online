@@ -6,13 +6,16 @@
         %li
           = link_to "メルカリ", products_path, class: "profile-crumbs-list-icon"
           %i.fas.fa-angle-right.fa-lg
-        %li マイページ
+        %li
+          = link_to "マイページ", profiles_path, class: "profile-crumbs-list-icon"
+          %i.fas.fa-angle-right.fa-lg
+        %li.current プロフィール
   %section.l-content-fixed
     %article.profile-main
       .profile-main-nav
         %nav.profile-main-nav-list
           %ul
-            %li.profile-main-nav-list-current.select
+            %li
               = link_to profiles_path do
                 %p マイページ
                 %i.fas.fa-angle-right.fa-lg
@@ -82,8 +85,8 @@
         %nav.profile-main-nav-list
           %h3 設定
           %ul
-            %li.select
-              = link_to profile_index_path do
+            %li.profile-main-nav-list-current.select
+              = link_to profiles_path do
                 %p プロフィール
                 %i.fas.fa-angle-right.fa-lg
             %li.select
@@ -110,89 +113,20 @@
               = link_to profiles_path do
                 %p ログアウト
                 %i.fas.fa-angle-right.fa-lg
-
-
-      %article.profile-main-details
-        %section.profile-main-details-user
-          = link_to profiles_path,class: "profile-main-details-user-content" do
+      %article.profile-main-right
+        %h2.profile-main-right-title プロフィール
+        .profile-main-right-content
+          .profile-main-right-content-image
             %figure
               = image_tag 'mercari_icon.png', size: '60x60'
-            %h2 メルカリ
-            .profile-main-details-user-content-details
-              .profile-main-details-user-content-details-evaluation
-                評価
-                %span 2
-              .profile-main-details-user-content-details-evaluation
-                出品数
-                %span 2
-        .profile-main-details-content
-          .profile-main-details-content-nav
-            .profile-main-details-content-nav-left.tab__top.is-active__top
-              %h3 お知らせ
-            .profile-main-details-content-nav-right.tab__top
-              %h3 やることリスト
-          .profile-main-details-content-left.content__top.is-show__top
-            %ul
-              %li.select
-                = link_to profiles_path do
-                  = image_tag 'mercari_icon.png', size: '48x48'
-                  %i.fas.fa-angle-right.fa-2x
-                  .profile-main-details-content-nav-left-title
-                    %p お知らせ
-                    %i.far.fa-clock.fa-lg
-                    %span 2時間前
-              %li.select
-                = link_to profiles_path do
-                  = image_tag 'mercari_icon.png', size: '48x48'
-                  %i.fas.fa-angle-right.fa-2x
-                  .profile-main-details-content-nav-left-title
-                    %p お知らせ
-                    %i.far.fa-clock.fa-lg
-                    %span 2時間前
-              %li.select
-                = link_to profiles_path do
-                  = image_tag 'mercari_icon.png', size: '48x48'
-                  %i.fas.fa-angle-right.fa-2x
-                  .profile-main-details-content-nav-left-title
-                    %p お知らせ
-                    %i.far.fa-clock.fa-lg
-                    %span 2時間前
-              %li.select
-                = link_to profiles_path do
-                  = image_tag 'mercari_icon.png', size: '48x48'
-                  %i.fas.fa-angle-right.fa-2x
-                  .profile-main-details-content-nav-left-title
-                    %p お知らせ
-                    %i.far.fa-clock.fa-lg
-                    %span 2時間前
-              %li.select
-                = link_to profiles_path do
-                  = image_tag 'mercari_icon.png', size: '48x48'
-                  %i.fas.fa-angle-right.fa-2x
-                  .profile-main-details-content-nav-left-title
-                    %p お知らせ
-                    %i.far.fa-clock.fa-lg
-                    %span 2時間前
-              %li
-                = link_to profiles_path do
-                  .profile-main-details-content-nav-left-button
-                    一覧を見る
-          .profile-main-details-content-todo.content__top
-            %ul.not-found
-              %li 現在、やることリストはありません
-        %h2.profile-main-details-bottom-content 購入した商品
-        .profile-main-details-content-nav
-          .profile-main-details-content-nav-left.tab__bottom.is-active__bottom
-            %h3 取引中
-          .profile-main-details-content-nav-right.tab__bottom
-            %h3 過去の取引
-        .profile-main-details-bottom-left.content__bottom.is-show__bottom
-          %ul.not-found
-            %li 取引中の商品がありません
-        .profile-main-details-bottom-right.content__bottom
-          %ul.not-found
-            %li 過去に取引した商品がありません
-
+            = form_with model: @profile, url: profile_index_path, class: '.profile-main-right-content-image-form', local: true do |f|
+              = f.text_field :nickname, class: "profile-main-right-content-image-textfield"
+        .profile-main-right-text
+          = form_with model: @profile, url: profile_index_path, class: '.profile-main-right-text-form', local: true do |f|
+            = f.text_area :text, class: ".profile-main-right-text-form-textarea"
+          = link_to profiles_path do
+            .profile-main-right-text-button
+              変更する
 = render partial: 'layouts/banner'
 
 = render partial: 'layouts/footer'
