@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :products
   resources :profiles
   resources :profile
+  resources :sign_out
   resources :users, only: [:index]
 end
