@@ -1,38 +1,8 @@
 #container
-  %section.l-content-fixed.header-color
-    %header.header
-      =link_to products_path,class: "header-icon.header-item" do
-        = image_tag 'log.jpg', size: '134x36'
-      %form{action: "/", method: "post", class: "header-form"}
-        %input{name: "title", :class => "header-form-input", placeholder: "何かお探しですか？"}
-          %i.fas.fa-search.fa-lg
-    %nav.nav
-      %ul.nav-menu
-        %li.nav-menu-item.nav-menu-category
-          =link_to products_path do
-            %i.fas.fa-bars.color-emphasis.fa-lg
-            %span カテゴリーから探す
-        %li.nav-menu-item.nav-menu-brand
-          =link_to products_path do
-            %i.fas.fa-tag.color-emphasis.fa-lg
-            %span ブランドから探す
-        %li.nav-menu-item.nav-menu-notice
-          =link_to products_path do
-            %i.fas.fa-bell.color.fa-lg
-            %span お知らせ
-        %li.nav-menu-item.nav-menu-todolist
-          =link_to products_path do
-            %i.fas.fa-check.color.fa-lg
-            %span やることリスト
-        %li.nav-menu-item.nav-menu-mypage
-          =link_to products_path do
-            %div.nav-menu-mypage-img
-              = image_tag 'log.jpg', size: '32x32'
-              %span マイページ
+  = render partial: 'layouts/header'
   %section.l-content-expanded
     %div
-      .hero-image-slider
-        = image_tag 'main-content2.png', size: '1440x390'
+      .hero-image
   %section.l-content-fixed
     %header.section-header
       %h1.section-header-picup ピックアップカテゴリー
@@ -80,8 +50,9 @@
                 %span ¥3,500
                 %i.far.fa-heart
                 %span.like 1
-      =link_to products_path,class:"all-product" do
-        すべての商品を見る
+      %span
+        =link_to products_path,class:"all-product" do
+          すべての商品を見る
     %section.picup-item.picup-item
       =link_to products_path,class:"picup-item-header" do
         メンズ新着アイテム
@@ -358,7 +329,7 @@
                 %span.like 1
       =link_to products_path,class:"all-product" do
         すべての商品を見る
-    %section.picup-item.picup-item
+    %section.picup-item.picup-item__last
       =link_to products_path,class:"picup-item-header" do
         ナイキ新着アイテム
       .l-multicolumn

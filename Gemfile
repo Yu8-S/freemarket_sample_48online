@@ -75,7 +75,6 @@ gem 'ancestry'
 gem 'haml-rails'
 gem 'erb2haml'
 gem "font-awesome-rails"
-gem 'bxslider-rails'
 gem 'jquery-rails'
 gem 'devise'
 gem 'omniauth-facebook'
