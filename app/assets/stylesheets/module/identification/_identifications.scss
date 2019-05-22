@@ -1,0 +1,83 @@
+.identifications-main {
+  width: 700px;
+  height: 1198px;
+  background-color: #fff;
+  &-title {
+    text-align: center;
+    font-size: 24px;
+    padding: 8px 24px;
+    border-bottom: 1px solid #f5f5f5;
+    line-height: 1.4;
+    margin: 0;
+  }
+  &-form {
+    padding: 64px;
+    p {
+      font-size: 1rem;
+      margin: 8px 0 0;
+      line-height: 1.5;
+    }
+    &-link__top {;
+      text-align: right;
+    }
+    &-content {
+      &-field {
+        margin: 40px 0 0;
+        font-size: 1rem;
+        label {
+          font-weight: 600;
+        }
+        span {
+          margin: 0 0 0 8px;
+          padding: 2px 4px;
+          border-radius: 2px;
+          color: #fff;
+          background: #c0c0c0;
+          font-size: 12px;
+          vertical-align: top;
+        }
+        input,select {
+          width: 540px;
+          height: 28px;
+          margin: 8px 0 0;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: #fff;
+          line-height: 1.5;
+          font-size: 16px;
+          outline: 0;
+        }
+        select {
+          height: 47px;
+          width: 572px;
+          padding: 0 16px;
+        }
+      }
+      &-submit {
+        margin: 0 auto;
+        width: 100%;
+        background-color: #ea352d;
+        color: #fff;
+        height: 47.5px;
+        text-align: center;
+        line-height: 48px;
+        font-size: 14px;
+        border: 1px solid #ea352d;
+        cursor: pointer;
+      }
+      &-button {
+        margin-top: 40px;
+      }
+      &-link__bottom {
+        text-align: right;
+        margin: 40px 0 0;
+        font-size: 1rem;
+      }
+    }
+  }
+  a:link { color: #0099e8; }
+  a:visited { color: #0099e8; }
+  a:hover { color: #0099e8; }
+  a:active { color: #0099e8; }
+}
