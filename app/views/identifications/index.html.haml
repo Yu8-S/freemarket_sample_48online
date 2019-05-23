@@ -1,0 +1,166 @@
+#container
+  = render partial: 'layouts/header'
+  %nav.profile-crumbs-list
+    .profile-crumbs-list-box
+      %ul
+        %li
+          = link_to "メルカリ", products_path, class: "profile-crumbs-list-icon"
+          %i.fas.fa-angle-right.fa-lg
+        %li
+          = link_to "マイページ", profiles_path, class: "profile-crumbs-list-icon"
+          %i.fas.fa-angle-right.fa-lg
+        %li.current 本人情報の登録
+  %section.l-content-fixed
+    %article.profile-main
+      .profile-main-nav
+        %nav.profile-main-nav-list
+          %ul
+            %li
+              = link_to profiles_path do
+                %p マイページ
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p お知らせ
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p やることリスト
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p いいね！一覧
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p 出品する
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p 出品した商品-出品中
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p 出品した商品-取引中
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p 出品した商品-売却済み
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p 購入した商品-取引中
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p 購入した商品-過去の取引
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p ニュース一覧
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p 評価一覧
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p ガイド
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p お問い合わせ
+                %i.fas.fa-angle-right.fa-lg
+        %nav.profile-main-nav-list
+          %h3 メルペイ
+          %ul
+            %li.select
+              = link_to profiles_path do
+                %p 売上・振込申請
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p ポイント
+                %i.fas.fa-angle-right.fa-lg
+        %nav.profile-main-nav-list
+          %h3 設定
+          %ul
+            %li.select
+              = link_to profiles_path do
+                %p プロフィール
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p 発送元・お届け先住所変更
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p 支払い方法
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p メール/パスワード
+                %i.fas.fa-angle-right.fa-lg
+            %li.profile-main-nav-list-current.select
+              = link_to profiles_path do
+                %p 本人情報
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p 電話番号の確認
+                %i.fas.fa-angle-right.fa-lg
+            %li.select
+              = link_to profiles_path do
+                %p ログアウト
+                %i.fas.fa-angle-right.fa-lg
+      .identifications-main
+        %h2.identifications-main-title 本人情報の登録
+        .identifications-main-form
+          .identifications-main-form-text
+            %p
+              お客さまの本人情報をご登録ください 。<br>
+              登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+            %p.identifications-main-form-link__top
+              = link_to "本人確認書類のアップロードについて＞","/users/auth/google_oauth2"
+          = form_with model: @addres, url: user_registration_path, class: ".identifications-main-form-content", local: true do |f|
+            .identifications-main-form-content-field
+              %label お名前
+              %p 須藤優也
+            .identifications-main-form-content-field
+              %label お名前カナ
+              %p スドウユウヤ
+            .identifications-main-form-content-field
+              %label 生年月日
+              %p 1993/01/01
+            .identifications-main-form-content-field
+              = f.label "郵便番号"
+              %span 任意
+              %br/
+              = f.text_field :postalcode, class: ".identifications-main-form-content-field-input"
+            .identifications-main-form-content-field
+              = f.label "都道府県"
+              %span 任意
+              %br/
+              = f.select :prefectures, [["北海道", "北海道"], ["沖縄", "沖縄"], ["東京", "東京"], ["福岡", "大分"]],class: ".identifications-main-form-content-field-input"
+            .identifications-main-form-content-field
+              = f.label "市区町村"
+              %span 任意
+              %br/
+              = f.text_field :city, class: ".identifications-main-form-content-field-input"
+            .identifications-main-form-content-field
+              = f.label "番地"
+              %span 任意
+              %br/
+              = f.text_field :address, class: ".identifications-main-form-content-field-input"
+            .identifications-main-form-content-field
+              = f.label "建物名"
+              %span 任意
+              %br/
+              = f.text_field :buildingname, class: ".identifications-main-form-content-field-input"
+            .identifications-main-form-content-submit.identifications-main-form-content-button
+              = f.submit "登録する", class: "identifications-main-form-content-submit"
+            .identifications-main-form-content-link__bottom
+              = link_to "本人情報の登録について＞","/users/auth/google_oauth2"
+= render partial: 'layouts/banner'
+
+= render partial: 'layouts/footer'
