@@ -1,0 +1,45 @@
+#container
+  %section.l-content-expanded
+    %article.buys
+      = render partial: 'layouts/header-log'
+      %article.buys-main
+        %h2.buys-main-title 購入内容の確認
+        %section.buys-main-content
+          = form_with model: @user, url: new_user_session_path, local: true do |f|
+            .buys-main-content-block
+              = image_tag 'default.jpg', size: '147x148'
+              %h3.buys-main-content-block-name アディダスの服
+              .buys-main-content-block-price
+                %p ¥9,000
+                %span 送料込み
+              .buys-main-content-block-point ポイントはありません
+              .buys-main-content-block-payment
+                %p.buys-main-content-block-payment__left 支払い金額
+                %p.buys-main-content-block-payment__right ¥9,000
+              %p.buys-main-content-block-note 配送先と支払い方法の入力を完了してください
+              = f.submit '購入する', class: "buys-main-content-block-submit"
+        %section.buys-main-content
+          .buys-main-content-block
+            .buys-main-content-block-box
+              %h3.buys-main-content-block-box-title
+                配送先
+                %p.buys-main-content-block-box-text
+                  〒888-1111
+                  %br
+                  東京都
+                  %br
+                  名前名前
+              %p.buys-main-content-block-box-link
+                = link_to "変更する＞", "/users/auth/google_oauth2"
+        %section.buys-main-content
+          .buys-main-content-block
+            .buys-main-content-block-box
+              %h3.buys-main-content-block-box-title
+                支払い方法
+                %p.buys-main-content-block-box-text
+                  %br
+                  &#47
+              %p.buys-main-content-block-box-link
+                = link_to "変更する＞", "/users/auth/google_oauth2"
+      = render partial: 'layouts/signup-footer'
+
