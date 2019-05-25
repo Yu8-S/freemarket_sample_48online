@@ -3,7 +3,7 @@
   background-color: #f5f5f5;
 }
 .l-content-fixed {
-  width: 100%;
+  width: 100vw;
   margin: 0 auto;
 }
 .l-content-expanded {
@@ -200,5 +200,14 @@ a:active { color: #0099e8; }
         }
       }
     }
+  }
+}
+
+.header-log {
+  height: 128px;
+  background-color: #f5f5f5;
+  &-icon {
+    padding-top: 40px;
+    padding-left: 20%;
   }
 }

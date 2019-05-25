@@ -1,10 +1,7 @@
 #container
   %section.l-content-expanded.l-content-expanded__sells
     %article.sell
-      %header.sell-header
-        .sell-header-icon
-          = link_to products_path, class: "signup-top-header-icon" do
-            = image_tag 'mercari_logo_horizontal.png', size: '185x49'
+      = render partial: 'layouts/header-log'
       %article.sell-main
         %h2.sell-main-title 商品の情報を入力
         %section.sell-main-content
