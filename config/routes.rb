@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :sign_out
   resources :cards
   resources :sells
+  resources :buys
   resources :identifications
   resources :users, only: [:index]
 end

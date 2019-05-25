@@ -1,10 +1,7 @@
 #container
   %section.l-content-expanded
     %article.signup-top
-      %header.signup-top-header
-        %div.signup-top-header-icon
-          = link_to products_path, class: "signup-top-header-icon" do
-            = image_tag 'mercari_logo_horizontal.png', size: '185x49'
+      = render partial: 'layouts/header-log'
       %main.signup-top-main
         %h2 新規会員登録
         %ul.signup-top-main-list
