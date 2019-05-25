@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :profile
   resources :sign_out
   resources :cards
+  resources :sells
   resources :identifications
   resources :users, only: [:index]
 end
