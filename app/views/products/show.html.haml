@@ -1,0 +1,155 @@
+#container
+  = render partial: 'layouts/header'
+  %nav.profile-crumbs-list
+    .profile-crumbs-list-box
+      %ul
+        %li
+          = link_to "メルカリ", products_path, class: "profile-crumbs-list-icon"
+          %i.fas.fa-angle-right.fa-lg
+        %li アディダスTシャツ
+  %section.l-content-fixed
+    %article.products-show
+      %h1.products-show-header アディダスTシャツ
+      %section.products-show-details
+        .products-show-details-left#wrap
+          %ul#slider
+            %li.slider-item
+              = image_tag "slider1.jpg", size: '300x300'
+            %li.slider-item
+              = image_tag "slider2.jpg", size: '300x300'
+            %li.slider-item
+              = image_tag "slider3.jpg", size: '300x300'
+            %li.slider-item
+              = image_tag "slider4.jpg", size: '300x300'
+          %ul#thumbnail-list
+            %li.thumbnail-item
+              = image_tag "slider1.jpg", size: '60x60'
+            %li.thumbnail-item
+              = image_tag "slider2.jpg", size: '60x60'
+            %li.thumbnail-item
+              = image_tag "slider3.jpg", size: '60x60'
+            %li.thumbnail-item
+              = image_tag "slider4.jpg", size: '60x60'
+        %table.products-show-details-right
+          %tbody
+            %tr
+              %th 出品者
+              %td
+                = link_to "メルカリ", products_path
+                %ul.evaluation
+                  %li
+                    %i.fas.fa-grin-beam.fa-lg
+                    %span 10
+                  %li
+                    %i.fas.fa-meh.fa-lg
+                    %span 10
+                  %li
+                    %i.fas.fa-sad-tear.fa-lg
+                    %span 10
+            %tr
+              %th カテゴリー
+              %td
+                %ul
+                  %li
+                    = link_to "メルカリ", products_path
+                  %li
+                    = link_to "メルカリ", products_path
+                  %li
+                    = link_to "メルカリ", products_path
+            %tr
+              %th ブランド
+              %td
+                = link_to "メルカリ", products_path
+            %tr
+              %th 商品の状態
+              %td 新品、未使用
+            %tr
+              %th 配送料の負担
+              %td 送料込み(出品者負担)
+            %tr
+              %th 配送の方法
+              %td らくらくメルカリ便
+            %tr
+              %th 配送元地域
+              %td
+                = link_to "東京都", products_path
+            %tr
+              %th 配送の目安
+              %td 1~2日で発送
+      .products-show-details-price
+        %p
+          %span ¥3,380
+          %span (税込)
+          %span 送料込み
+      = link_to products_path do
+        .products-show-details-state
+          購入画面に進む
+      .products-show-details-description
+        %pre
+          テストテストテストテスト
+          テストテスト
+          テストテスト
+    %article.products-comment
+      .products-comment-content__first
+        %figure.products-comment-content-image
+          = image_tag 'mercari_icon.png', size: '40x40'
+        .products-comment-content-box
+          .products-comment-content-box-chat
+            %p テストコメント
+          .products-comment-content-box-time
+            %i.far.fa-clock.fa-lg
+            %time 2時間前
+      .products-comment-content
+        %figure.products-comment-content-image
+          = image_tag 'mercari_icon.png', size: '40x40'
+        .products-comment-content-box
+          .products-comment-content-box-chat
+            %p テストコメント
+          .products-comment-content-box-time
+            %i.far.fa-clock.fa-lg
+            %time 2時間前
+      .products-comment-content
+        %figure.products-comment-content-image
+          = image_tag 'mercari_icon.png', size: '40x40'
+        .products-comment-content-box
+          .products-comment-content-box-chat
+            %p テストコメント
+          .products-comment-content-box-time
+            %i.far.fa-clock.fa-lg
+            %time 2時間前
+      .products-comment-note
+        相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      = form_with model: @comment, url: profile_index_path, local: true do |f|
+        = f.text_area :text, class: "products-comment-textarea"
+        = f.submit 'コメントする', class: "products-comment-submit"
+    .products-show-link
+      = link_to "＜テスト", products_path, class: "profile-crumbs-li"
+      = link_to "テスト＞", products_path, class: "profile-crumbs-list-icon"
+    .products-show-media
+      .products-show-media-box
+        %i.fab.fa-facebook-square.fa-5x
+        %i.fab.fa-twitter-square.fa-5x
+        %i.fab.fa-google.fa-5x
+    = link_to products_path do
+      %h2.products-show-link-title
+        テストさんのその他の出品
+    .products-show-column
+      = render partial: 'products/show-column'
+      = render partial: 'products/show-column'
+      = render partial: 'products/show-column'
+      = render partial: 'products/show-column'
+      = render partial: 'products/show-column'
+      = render partial: 'products/show-column'
+    = link_to products_path ,class: 'products-show-link-title'do
+      %h2.products-show-link-title
+        アディダス その他の出品
+    .products-show-column
+      = render partial: 'products/show-column'
+      = render partial: 'products/show-column'
+      = render partial: 'products/show-column'
+      = render partial: 'products/show-column'
+      = render partial: 'products/show-column'
+      = render partial: 'products/show-column'
+
+    = render partial: 'layouts/banner'
+    = render partial: 'layouts/footer'
