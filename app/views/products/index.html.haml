@@ -10,46 +10,8 @@
       =link_to products_path,class:"picup-item-header" do
         レディース新着アイテム
       .l-multicolumn
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
+        - @womens.each do |product|
+          = render partial: "new-item", locals: { product: product }
       %span
         =link_to products_path,class:"all-product" do
           すべての商品を見る
@@ -57,322 +19,56 @@
       =link_to products_path,class:"picup-item-header" do
         メンズ新着アイテム
       .l-multicolumn
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
+        - @mens.each do |product|
+          = render partial: "new-item", locals: { product: product }
       =link_to products_path,class:"all-product" do
         すべての商品を見る
     %section.picup-item.picup-item
       =link_to products_path,class:"picup-item-header" do
         ベビー・キッズ新着アイテム
       .l-multicolumn
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
+        - @kids.each do |product|
+          = render partial: "new-item", locals: { product: product }
       =link_to products_path,class:"all-product" do
         すべての商品を見る
     %section.picup-item.picup-item
       =link_to products_path,class:"picup-item-header" do
         コスメ・香水・美容新着アイテム
       .l-multicolumn
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
+        - @cosmetics.each do |product|
+          = render partial: "new-item", locals: { product: product }
       =link_to products_path,class:"all-product" do
         すべての商品を見る
     %section.picup-item.picup-item
       =link_to products_path,class:"picup-item-header" do
         シャネル新着アイテム
       .l-multicolumn
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
+        - @chanel.each do |product|
+          = render partial: "new-item", locals: { product: product }
       =link_to products_path,class:"all-product" do
         すべての商品を見る
     %section.picup-item.picup-item
       =link_to products_path,class:"picup-item-header" do
         ルイヴィトン新着アイテム
       .l-multicolumn
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
+        - @vuitton.each do |product|
+          = render partial: "new-item", locals: { product: product }
       =link_to products_path,class:"all-product" do
         すべての商品を見る
     %section.picup-item.picup-item
       =link_to products_path,class:"picup-item-header" do
         シェプリーム新着アイテム
       .l-multicolumn
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
+        - @supreme.each do |product|
+          = render partial: "new-item", locals: { product: product }
       =link_to products_path,class:"all-product" do
         すべての商品を見る
     %section.picup-item.picup-item__last
       =link_to products_path,class:"picup-item-header" do
         ナイキ新着アイテム
       .l-multicolumn
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
-        %section.l-column
-          =link_to products_path do
-            %header
-              = image_tag 'default.jpg', size: '213x220'
-            %div
-              %p サンプル。adidas! 早い者勝ち
-              .details
-                %span ¥3,500
-                %i.far.fa-heart
-                %span.like 1
+        - @nike.each do |product|
+          = render partial: "new-item", locals: { product: product }
       =link_to products_path,class:"all-product" do
         すべての商品を見る
 
