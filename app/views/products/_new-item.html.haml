@@ -1,0 +1,13 @@
+%section.l-column
+  =link_to products_path do
+    %header
+      - product.images.each do |image|
+        = image_tag product.url if image.image_url.present? size: '213x220'
+    %div
+      %p
+        = product.description
+      .details
+        %span
+          = product.price
+        %i.far.fa-heart
+        %span.like 1
