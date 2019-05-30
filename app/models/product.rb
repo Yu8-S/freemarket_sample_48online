@@ -3,5 +3,5 @@ class Product < ApplicationRecord
   belongs_to :user, optional: true
   has_ancestry
 
-  scope :category, -> (category) { where("category = ?",(category)).limit(4).order(:created_at) }
+  scope :get_categroy, -> (category) { where("category = ?",(category)).limit(4).order(:created_at) }
 end
