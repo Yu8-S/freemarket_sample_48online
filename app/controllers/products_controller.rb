@@ -14,8 +14,25 @@ class ProductsController < ApplicationController
   end
 
   def new
+    @product = Product.new
+    @product.build_image
   end
 
-  def edit
+  def create
+    @product = Product.new(product_params)
+    if @product.save
+      flash[:success] = "ユーザを登録しました"
+      redirect_to root_path
+    else
+      flash[:danger] = "ユーザの登録に失敗しました"
+      render :new
+    end
   end
+
+  private
+
+  def product_params
+    params.require(:product).permit(:name, :description, :category, :state, :shipping_charges, :shipping_origin_area, :estimated_shipping, :price, image_attributes: [:image_url]).merge(user_id: current_user.id)
+  end
+
 end
