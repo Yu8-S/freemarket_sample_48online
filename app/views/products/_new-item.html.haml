@@ -1,8 +1,7 @@
 %section.l-column
   =link_to products_path do
     %header
-      - product.images.each do |image|
-        = image_tag product.url if image.image_url.present? size: '213x220'
+      = image_tag 'default.jpg', size: '213x220'
     %div
       %p
         = product.description
