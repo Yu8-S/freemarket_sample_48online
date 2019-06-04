@@ -120,8 +120,8 @@
       %h2.products-show-link-title
         = "#{@product.brand} その他の出品"
     .products-show-column
-      / - @brand.each do |product|
-      /   = render partial: "show-column", locals: { product: product }
+      - @brand.each do |product|
+        = render partial: "show-column", locals: { product: product }
 
     = render partial: 'layouts/banner'
     = render partial: 'layouts/footer'
