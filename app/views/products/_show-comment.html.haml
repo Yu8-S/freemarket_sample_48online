@@ -1,0 +1,12 @@
+.products-comment-content__first
+  %figure.products-comment-content-image
+    = image_tag 'mercari_icon.png'
+  %p.products-comment-content-name
+    = evaluation.user.nickname
+  .products-comment-content-box
+    .products-comment-content-box-chat
+      %p
+        = evaluation.comment
+    .products-comment-content-box-time
+      %i.far.fa-clock.fa-lg
+      %time 2時間前
