@@ -1,10 +1,12 @@
 %section.products-show-column-main
-  =link_to products_path do
+  =link_to product_path(product.id) do
     %header
-      = image_tag 'default.jpg', size: '220x220'
+      = image_tag 'default.jpg', size: '213x220'
     %div
-      %p サンプル。adidas! 早い者勝ち
+      %p
+        = product.description
       .details
-        %span ¥3,500
+        %span
+          = product.price
         %i.far.fa-heart
         %span.like 1
