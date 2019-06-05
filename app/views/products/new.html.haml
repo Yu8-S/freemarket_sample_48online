@@ -15,8 +15,8 @@
                 ドラッグアンドドロップ
                 %br
                 またはクリックしてファイルをアップロード
-            = f.fields_for :image do |fin|
-              = fin.file_field :image, class: "sell-main-content-file", id: "file"
+            / = f.fields_for :image do |fin|
+            /   = fin.file_field :image, class: "sell-main-content-file", id: "file"
           %section.sell-main-content
             .sell-title
               %h3.sell-label 商品名
