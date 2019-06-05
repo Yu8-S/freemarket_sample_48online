@@ -83,4 +83,5 @@ gem 'recaptcha', require: "recaptcha/rails"
 gem 'dotenv-rails'
 gem 'carrierwave'
 gem 'fog-aws'
+gem 'pry-rails'
 

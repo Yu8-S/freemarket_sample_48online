@@ -11,6 +11,10 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @product = Product.find(params[:id])
+    @user = Product.where("user_id = #{@product.user_id}").limit(6)
+    @evaluation = @product.evaluations.order(:created_at)
+    @brand = Product.where("brand = #{@product.brand}").limit(6)
   end
 
   def new

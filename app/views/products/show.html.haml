@@ -6,10 +6,12 @@
         %li
           = link_to "メルカリ", products_path, class: "profile-crumbs-list-icon"
           %i.fas.fa-angle-right.fa-lg
-        %li アディダスTシャツ
+        %li
+          = @product.name
   %section.l-content-fixed
     %article.products-show
-      %h1.products-show-header アディダスTシャツ
+      %h1.products-show-header
+        = @product.name
       %section.products-show-details
         .products-show-details-left#wrap
           %ul#slider
@@ -35,7 +37,7 @@
             %tr
               %th 出品者
               %td
-                = link_to "メルカリ", products_path
+                = link_to "#{@product.user.nickname}", products_path
                 %ul.evaluation
                   %li
                     %i.fas.fa-grin-beam.fa-lg
@@ -51,34 +53,39 @@
               %td
                 %ul
                   %li
-                    = link_to "メルカリ", products_path
+                    = link_to "#{@product.category}", products_path
                   %li
-                    = link_to "メルカリ", products_path
+                    = link_to "#{@product.category}", products_path
                   %li
-                    = link_to "メルカリ", products_path
+                    = link_to "#{@product.category}", products_path
             %tr
               %th ブランド
               %td
-                = link_to "メルカリ", products_path
+                = link_to "#{@product.brand}", products_path
             %tr
               %th 商品の状態
-              %td 新品、未使用
+              %td
+                = @product.state
             %tr
               %th 配送料の負担
-              %td 送料込み(出品者負担)
+              %td
+                = @product.shipping_charges
             %tr
               %th 配送の方法
-              %td らくらくメルカリ便
+              %td
+                = @product.shipping_method
             %tr
               %th 配送元地域
               %td
-                = link_to "東京都", products_path
+                = link_to "#{@product.shipping_origin_area}", products_path
             %tr
               %th 配送の目安
-              %td 1~2日で発送
+              %td
+                = @product.estimated_shipping
       .products-show-details-price
         %p
-          %span ¥3,380
+          %span
+            = "¥#{@product.price}"
           %span (税込)
           %span 送料込み
       = link_to products_path do
@@ -86,41 +93,14 @@
           購入画面に進む
       .products-show-details-description
         %pre
-          テストテストテストテスト
-          テストテスト
-          テストテスト
+          = @product.description
     %article.products-comment
-      .products-comment-content__first
-        %figure.products-comment-content-image
-          = image_tag 'mercari_icon.png'
-        .products-comment-content-box
-          .products-comment-content-box-chat
-            %p テストコメント
-          .products-comment-content-box-time
-            %i.far.fa-clock.fa-lg
-            %time 2時間前
-      .products-comment-content
-        %figure.products-comment-content-image
-          = image_tag 'mercari_icon.png'
-        .products-comment-content-box
-          .products-comment-content-box-chat
-            %p テストコメント
-          .products-comment-content-box-time
-            %i.far.fa-clock.fa-lg
-            %time 2時間前
-      .products-comment-content
-        %figure.products-comment-content-image
-          = image_tag 'mercari_icon.png'
-        .products-comment-content-box
-          .products-comment-content-box-chat
-            %p テストコメント
-          .products-comment-content-box-time
-            %i.far.fa-clock.fa-lg
-            %time 2時間前
+      - @evaluation.each do |evaluation|
+        = render partial: "show-comment", locals: { evaluation: evaluation }
       .products-comment-note
         相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
-      = form_with model: @comment, url: profile_index_path, local: true do |f|
-        = f.text_area :text, class: "products-comment-textarea"
+      = form_with url: product_evaluations_path(@product.id), local: true do |f|
+        = f.text_area :comment, class: "products-comment-textarea"
         = f.submit 'コメントする', class: "products-comment-submit"
     .products-show-link
       = link_to "＜テスト", products_path, class: "profile-crumbs-li"
@@ -132,24 +112,16 @@
         %i.fab.fa-google.fa-5x
     = link_to products_path do
       %h2.products-show-link-title
-        テストさんのその他の出品
+        = "#{@product.user.nickname}さんのその他の出品"
     .products-show-column
-      = render partial: 'products/show-column'
-      = render partial: 'products/show-column'
-      = render partial: 'products/show-column'
-      = render partial: 'products/show-column'
-      = render partial: 'products/show-column'
-      = render partial: 'products/show-column'
+      - @user.each do |product|
+        = render partial: "show-column", locals: { product: product }
     = link_to products_path ,class: 'products-show-link-title'do
       %h2.products-show-link-title
-        アディダス その他の出品
+        = "#{@product.brand} その他の出品"
     .products-show-column
-      = render partial: 'products/show-column'
-      = render partial: 'products/show-column'
-      = render partial: 'products/show-column'
-      = render partial: 'products/show-column'
-      = render partial: 'products/show-column'
-      = render partial: 'products/show-column'
+      - @brand.each do |product|
+        = render partial: "show-column", locals: { product: product }
 
     = render partial: 'layouts/banner'
     = render partial: 'layouts/footer'

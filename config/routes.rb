@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   # devise_for :users, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
   root 'products#index'
-  resources :products
+  resources :products do
+    resources :evaluations
+  end
   resources :profiles
   resources :profile
   resources :sign_out
