@@ -79,19 +79,19 @@
                 %span
           %section.sell-main-content
             %p.sell-main-content-note
-              = link_to "禁止されている出品", "/users/auth/google_oauth2"
+              = link_to "禁止されている出品", root_path
               、
-              = link_to "行為", "/users/auth/google_oauth2"
+              = link_to "行為", root_path
               を必ずご確認ください。
               %br
               またブランド品でシリアルナンバー等がある場合はご記載ください。
-              = link_to "偽ブランドの販売", "/users/auth/google_oauth2"
+              = link_to "偽ブランドの販売", root_path
               は犯罪であり処罰される可能性があります。
               %br
               また、出品をもちまして
-              = link_to "加盟店規約", "/users/auth/google_oauth2"
+              = link_to "加盟店規約",root_path
               に同意したことになります。
               = f.submit '出品する', class: "sell-main-content-submit"
-            = link_to "/users/auth/google_oauth2" do
+            = link_to root_path do
               .sell-main-content-back もどる
       = render partial: 'layouts/signup-footer'
