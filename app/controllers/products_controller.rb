@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product
+  before_action :set_product, only: [:edit, :update, :show]
   def index
     @womens = Product.get_categroy("レディース")
     @mens = Product.get_categroy("メンズ")
@@ -45,6 +45,7 @@ class ProductsController < ApplicationController
       else
         flash[:danger] = "商品の編集に失敗しました"
         render :update
+      end
     end
   end
 
