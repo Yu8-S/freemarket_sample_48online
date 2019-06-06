@@ -40,14 +40,18 @@ class ProductsController < ApplicationController
   def update
     product = Product.find(params[:id])
     if product.user_id == current_user.id
-    product.update(product_params)
+      product.update(products_params)
+      redirect_to root_path
     end
   end
 
   private
 
   def product_params
-    params.permit(:name, :description, :category, :state, :shipping_charges, :shipping_origin_area, :estimated_shipping, :price, image_attributes: [:image_url]).merge(user_id: current_user.id)
+    params.require(:product).permit(:name, :description, :category, :state, :shipping_charges, :shipping_origin_area, :estimated_shipping, :price, image_attributes: [:image_url]).merge(user_id: current_user.id)
   end
 
+  def products_params
+    params.permit(:name, :description, :category, :state, :shipping_charges, :shipping_origin_area, :estimated_shipping, :price, image_attributes: [:image_url]).merge(user_id: current_user.id)
+  end
 end
