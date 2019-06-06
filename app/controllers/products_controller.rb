@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :set_product
   def index
     @womens = Product.get_categroy("レディース")
     @mens = Product.get_categroy("メンズ")
@@ -11,7 +12,6 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
     @user = Product.where("user_id = #{@product.user_id}").limit(6)
     @evaluation = @product.evaluations.order(:created_at)
     @brand = Product.where("brand = #{@product.brand}").limit(6)
@@ -34,14 +34,17 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @product = Product.find(params[:id])
   end
 
   def update
-    product = Product.find(params[:id])
     if product.user_id == current_user.id
       product.update(products_params)
-      redirect_to root_path
+      if @product.save
+        flash[:success] = "商品を編集しました"
+        redirect_to root_path
+      else
+        flash[:danger] = "商品の編集に失敗しました"
+        render :update
     end
   end
 
@@ -53,5 +56,9 @@ class ProductsController < ApplicationController
 
   def products_params
     params.permit(:name, :description, :category, :state, :shipping_charges, :shipping_origin_area, :estimated_shipping, :price, image_attributes: [:image_url]).merge(user_id: current_user.id)
+  end
+
+  def set_product
+    @product = Product.find(params[:id])
   end
 end
