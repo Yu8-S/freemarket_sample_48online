@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:edit, :update, :show]
+  before_action :set_product, only: [:edit, :update, :show, :destroy]
   def index
     @womens = Product.get_categroy("レディース")
     @mens = Product.get_categroy("メンズ")
@@ -33,12 +33,25 @@ class ProductsController < ApplicationController
     end
   end
 
+  def destroy
+    if @product.user_id == current_user.id
+      @product.destroy
+      if @product.destroy
+        flash[:success] = "商品を削除しました"
+        redirect_to root_path
+      else
+        flash[:danger] = "商品の削除に失敗しました"
+        render :destroy
+      end
+    end
+  end
+
   def edit
   end
 
   def update
-    if product.user_id == current_user.id
-      product.update(products_params)
+    if @product.user_id == current_user.id
+      @product.update(products_params)
       if @product.save
         flash[:success] = "商品を編集しました"
         redirect_to root_path
