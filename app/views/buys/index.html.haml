@@ -19,8 +19,8 @@
               %p.buys-main-content-block-payment__right
                 = "¥#{@product.price}"
             %p.buys-main-content-block-note 配送先と支払い方法の入力を完了してください
-            = form_tag(pay_products_path(current_user.id), method: :post) do
-              %script.payjp-button{src: "https://checkout.pay.jp", type: "text/javascript" ,"data-text" => "購入する" ,"class" => "buys-main-content-block-submit","data-key" => "pk_test_2d6451f58f3eb5e59c629cd6"}
+            / = form_tag(pay_products_path(current_user.id), method: :post) do
+            /   %script.payjp-button{src: "https://checkout.pay.jp", type: "text/javascript" ,"data-text" => "購入する" ,"class" => "buys-main-content-block-submit","data-key" => "pk_test_2d6451f58f3eb5e59c629cd6"}
                 .buys-main-content-block-submit
         %section.buys-main-content
           .buys-main-content-block
