@@ -1,15 +1,5 @@
 #container
-  = render partial: 'layouts/header'
-  %nav.profile-crumbs-list
-    .profile-crumbs-list-box
-      %ul
-        %li
-          = link_to "メルカリ", products_path, class: "profile-crumbs-list-icon"
-          %i.fas.fa-angle-right.fa-lg
-        %li
-          = link_to "マイページ", profiles_path, class: "profile-crumbs-list-icon"
-          %i.fas.fa-angle-right.fa-lg
-        %li.current プロフィール
+  = breadcrumb :profile
   %section.l-content-fixed
     %article.profile-main
       .profile-main-nav
@@ -94,7 +84,7 @@
                 %p 発送元・お届け先住所変更
                 %i.fas.fa-angle-right.fa-lg
             %li.select
-              = link_to profiles_path do
+              = link_to cards_path do
                 %p 支払い方法
                 %i.fas.fa-angle-right.fa-lg
             %li.select
@@ -102,7 +92,7 @@
                 %p メール/パスワード
                 %i.fas.fa-angle-right.fa-lg
             %li.select
-              = link_to profiles_path do
+              = link_to identifications_path do
                 %p 本人情報
                 %i.fas.fa-angle-right.fa-lg
             %li.select
@@ -110,7 +100,7 @@
                 %p 電話番号の確認
                 %i.fas.fa-angle-right.fa-lg
             %li.select
-              = link_to profiles_path do
+              = link_to sign_out_index_path do
                 %p ログアウト
                 %i.fas.fa-angle-right.fa-lg
       %article.profile-main-right
