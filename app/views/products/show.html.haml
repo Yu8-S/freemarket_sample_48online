@@ -1,13 +1,5 @@
 #container
-  = render partial: 'layouts/header'
-  %nav.profile-crumbs-list
-    .profile-crumbs-list-box
-      %ul
-        %li
-          = link_to "メルカリ", products_path, class: "profile-crumbs-list-icon"
-          %i.fas.fa-angle-right.fa-lg
-        %li
-          = @product.name
+  = breadcrumb :show, @product
   %section.l-content-fixed
     %article.products-show
       %h1.products-show-header
