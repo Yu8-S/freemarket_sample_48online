@@ -5,19 +5,23 @@
       %article.buys-main
         %h2.buys-main-title 購入内容の確認
         %section.buys-main-content
-          = form_with model: @user, url: new_user_session_path, local: true do |f|
-            .buys-main-content-block
-              = image_tag 'default.jpg', size: '147x148'
-              %h3.buys-main-content-block-name アディダスの服
-              .buys-main-content-block-price
-                %p ¥9,000
-                %span 送料込み
-              .buys-main-content-block-point ポイントはありません
-              .buys-main-content-block-payment
-                %p.buys-main-content-block-payment__left 支払い金額
-                %p.buys-main-content-block-payment__right ¥9,000
-              %p.buys-main-content-block-note 配送先と支払い方法の入力を完了してください
-              = f.submit '購入する', class: "buys-main-content-block-submit"
+          .buys-main-content-block
+            = image_tag 'default.jpg', size: '147x148'
+            %h3.buys-main-content-block-name
+              = @product.name
+            .buys-main-content-block-price
+              %p
+                = "¥#{@product.price}"
+              %span 送料込み
+            .buys-main-content-block-point ポイントはありません
+            .buys-main-content-block-payment
+              %p.buys-main-content-block-payment__left 支払い金額
+              %p.buys-main-content-block-payment__right
+                = "¥#{@product.price}"
+            %p.buys-main-content-block-note 配送先と支払い方法の入力を完了してください
+            = form_tag(pay_products_path(current_user.id), method: :post) do
+              %script.payjp-button{src: "https://checkout.pay.jp", type: "text/javascript" ,"data-text" => "購入する" ,"class" => "buys-main-content-block-submit","data-key" => "pk_test_2d6451f58f3eb5e59c629cd6"}
+                .buys-main-content-block-submit
         %section.buys-main-content
           .buys-main-content-block
             .buys-main-content-block-box

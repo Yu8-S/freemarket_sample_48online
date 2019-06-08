@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:edit, :update, :show, :destroy]
+  before_action :set_product, only: [:edit, :update, :show, :destroy, :pay]
   def index
     @womens = Product.get_categroy("レディース")
     @mens = Product.get_categroy("メンズ")
@@ -57,6 +57,15 @@ class ProductsController < ApplicationController
         render :update
       end
     end
+  end
+
+  def pay
+    Payjp.api_key = ENV['API_KEY']
+    Payjp::Charge.create(
+      amount: @product.price,
+      card: params['payjp-token'],
+      currency: 'jpy',
+    )
   end
 
   private

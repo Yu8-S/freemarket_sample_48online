@@ -4,13 +4,16 @@ Rails.application.routes.draw do
   root 'products#index'
   resources :products do
     resources :evaluations
+    resources :buys
+    collection do
+      post 'pay/:id' => 'products#pay', as: 'pay'
+    end
   end
   resources :profiles
   resources :profile
   resources :sign_out
   resources :cards
   resources :sells
-  resources :buys
   resources :identifications
   resources :users, only: [:index]
 end
