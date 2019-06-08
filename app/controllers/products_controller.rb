@@ -34,15 +34,12 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    if @product.user_id == current_user.id
-      @product.destroy
-      if @product.destroy
-        flash[:success] = "商品を削除しました"
-        redirect_to root_path
-      else
-        flash[:danger] = "商品の削除に失敗しました"
-        render :destroy
-      end
+    if @product.destroy
+      flash[:success] = "商品を削除しました"
+      redirect_to root_path
+    else
+      flash[:danger] = "商品の削除に失敗しました"
+      render :destroy
     end
   end
 
@@ -52,7 +49,7 @@ class ProductsController < ApplicationController
   def update
     if @product.user_id == current_user.id
       @product.update(products_params)
-      if @product.save
+      if @product.update
         flash[:success] = "商品を編集しました"
         redirect_to root_path
       else
