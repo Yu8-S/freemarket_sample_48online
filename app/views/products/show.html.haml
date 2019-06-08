@@ -80,7 +80,7 @@
             = "¥#{@product.price}"
           %span (税込)
           %span 送料込み
-      = link_to products_path do
+      = link_to product_buys_path(@product.id) do
         .products-show-details-state
           購入画面に進む
       .products-show-details-description
