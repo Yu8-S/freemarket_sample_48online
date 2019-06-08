@@ -85,4 +85,3 @@ gem 'carrierwave'
 gem 'fog-aws'
 gem 'pry-rails'
 gem "gretel"
-gem 'payjp'
