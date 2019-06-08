@@ -94,6 +94,9 @@
       .products-show-details-description
         %pre
           = @product.description
+    %article.products-loginuser
+      = form_with url: product_path(@product.id), method: :delete, local: true do |f|
+        = f.submit '削除する', class: "products-show-details-state"
     %article.products-comment
       - @evaluation.each do |evaluation|
         = render partial: "show-comment", locals: { evaluation: evaluation }
