@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  has_one :image
+  has_one :image, dependent: :destroy
   belongs_to :user, optional: true
   has_many :evaluations, dependent: :destroy
   # has_ancestry

@@ -1,7 +1,7 @@
 %section.l-column
   =link_to product_path(product.id) do
     %header
-      = image_tag 'default.jpg', size: '213x220'
+      / = image_tag product.images.to_s
     %div
       %p
         = product.name

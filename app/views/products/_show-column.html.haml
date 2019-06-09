@@ -1,7 +1,8 @@
 %section.products-show-column-main
   =link_to product_path(product.id) do
     %header
-      = image_tag 'default.jpg', size: '213x220'
+      / = image_tag 'default.jpg', size: '213x220'
+      / = image_tag product.image.image_url.url if product.image.image_url.present?
     %div
       %p
         = product.description

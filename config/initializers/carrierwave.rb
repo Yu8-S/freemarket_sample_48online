@@ -18,5 +18,6 @@ CarrierWave.configure do |config|
   config.fog_attributes = { 'Cache-Control' => "max-age=#{365.day.to_i}" }
 
   config.fog_directory  = 'mercari-copy'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/mercari-copy'
   config.cache_storage = :fog
 end
